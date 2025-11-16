@@ -1,0 +1,26 @@
+/* Header Homepage */
+.header{
+    background-image: url('bg-header.jpg');
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* pagina contatti */
+.box{
+    border: dotted white 2px;
+    min-height: 250px;
+    max-width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.box:hover{
+    border: 3px solid white;
+    transform: translateY(-10px);
+}
+
+.icon{
+    font-size: 50px;
+}
