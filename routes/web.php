@@ -10,10 +10,10 @@ Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi-siamo
 
 Route::get('/chi-siamo/dettaglio/{name}', [PublicController::class, 'dettaglioUtente'])->name('dettaglio-utente');
 
-Route::get('/contatti', function(){
-    return view('contatti');
-})->name('contatti');
+Route::get('/contatti', [PublicController::class, 'contacts'])->name('contatti');
 
 Route::get('/corsi', [CorsiController::class, 'corsi'])->name('corsi');
 
 Route::get('/corso/dettaglio/{id}', [CorsiController::class, 'dettaglioCorso'])->name('dettaglio-corso');
+
+Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');

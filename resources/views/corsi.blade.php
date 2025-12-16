@@ -1,7 +1,7 @@
 <x-layout>
     <header>
         <div class="container-fluid corsi">
-            <div class="row h-100 justify-content-around align-items-center">
+            <div class="row h-custom justify-content-around align-items-center">
                 <div class="row">
                     <h2 class="display-5 text-white text-center fw-semibold my-3">I NOSTRI CORSI FITNESS</h2>
                 </div>

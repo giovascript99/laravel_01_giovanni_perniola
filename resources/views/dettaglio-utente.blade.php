@@ -1,7 +1,7 @@
 <x-layout>
     <header>
         <div class="container-fluid header">
-            <div class="row h-100 justify-content-around align-items-center">
+            <div class="row h-custom justify-content-around align-items-center">
                 <div class="col-md-6 col-12">
                     <h3 class="text-center text-white">{{$user['name']}} {{$user['surname']}}</h3>
                     <h4 class="text-center text-white">{{$user['role']}}</h4>

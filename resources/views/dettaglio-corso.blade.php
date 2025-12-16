@@ -1,7 +1,7 @@
 <x-layout>
     <header>
         <div class="container-fluid header">
-            <div class="row h-100 justify-content-around align-items-center">
+            <div class="row h-custom justify-content-around align-items-center">
                 <div class="col-md-6 col-12">
                     <img src="{{$corso['img']}}" alt="{{$corso['corso']}}" class="img-fluid">
                 </div>

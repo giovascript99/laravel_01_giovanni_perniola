@@ -1,13 +1,17 @@
 /* Header Homepage */
 .header{
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/media/bg_header.png');
-    height: 95vh;
+    min-height: 130vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /* pagina contatti */
+.h-custom{
+    height: 400px;
+}
+
 .box{
     border: dotted white 2px;
     min-height: 250px;
