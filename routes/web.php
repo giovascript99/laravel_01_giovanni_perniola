@@ -16,4 +16,12 @@ Route::get('/corsi', [CorsiController::class, 'corsi'])->name('corsi');
 
 Route::get('/corso/dettaglio/{id}', [CorsiController::class, 'dettaglioCorso'])->name('dettaglio-corso');
 
+// Invio mail
+
 Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
+
+// Inserimento corso
+
+Route::get('/corsi/creazione', [CorsiController::class, 'creazione'])->name('corsi.creazione');
+
+Route::post('/corsi/submit', [CorsiController::class, 'store'])->name('corsi.submit');

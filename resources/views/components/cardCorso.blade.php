@@ -1,7 +1,7 @@
 <div class="card mb-3" style="width: 18rem;">
-    <img src="{{$img}}" class="card-img-top" alt="{{$corso}}">
+    <img src="https://picsum.photos/200/150" class="card-img-top img-fluid" alt="{{ $corso }}">
     <div class="card-body text-center">
-        <h5 class="card-title">{{$corso}}</h5>
-        <a href="{{route('dettaglio-corso', ['id'=>$id])}}" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{ $corso }}</h5>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
