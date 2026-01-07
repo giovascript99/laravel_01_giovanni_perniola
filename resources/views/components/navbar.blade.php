@@ -23,6 +23,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{route('corsi')}}">I nostri corsi</a></li>
+                        <li><a class="dropdown-item" href="{{route('corsi.creazione')}}">Inserisci i tuoi corsi</a></li>
                     </ul>
                 </li>
             </ul>

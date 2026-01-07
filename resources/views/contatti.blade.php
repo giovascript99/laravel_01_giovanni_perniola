@@ -49,7 +49,7 @@
                     <form method="POST" action="{{route('contactUs')}}">
                         @csrf
                         <div class="mb-3">
-                            <label for="user" class="form-label">Inserisci la tuo nome:</label>
+                            <label for="user" class="form-label">Inserisci il tuo nome:</label>
                             <input type="text" name="user" class="form-control" id="user" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">

@@ -1,7 +1,7 @@
-/* Header Homepage */
+/* Header */
 .header{
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/media/bg_header.png');
-    min-height: 130vh;
+    min-height: 140vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@
 /* corsi */
 .corsi{
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/media/bg_header.png');
-    min-height: 95vh;
+    min-height: 140vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

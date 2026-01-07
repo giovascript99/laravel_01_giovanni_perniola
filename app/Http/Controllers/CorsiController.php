@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Courses;
 use Illuminate\Http\Request;
+use App\Http\Requests\CorsoRequest;
 
 class CorsiController extends Controller
 {
@@ -32,12 +33,13 @@ class CorsiController extends Controller
         return view('corsi.creazione');
     }
 
-    public function store(Request $request){
+    public function store(CorsoRequest $request){
         $corso = Courses::create([
-            'corso' => $request->corso,
+            'title' => $request->title,
             'pt' => $request->pt,
-            'intensita' => $request->intensita,
-            'durata' => $request->durata
+            'intensity' => $request->intensity,
+            'time' => $request->time,
+            'img' => $request->file('img')->store('img', 'public')
         ]);
 
         return redirect()->route('homepage')->with('successMessage', 'Hai correttamente inserito il tuo corso');

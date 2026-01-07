@@ -9,9 +9,10 @@ class Courses extends Model
     protected $table = 'courses';
 
     protected $fillable = [
-    'corso',
+    'title',
     'pt',
-    'intensita',
-    'durata'
+    'intensity',
+    'time',
+    'img'
 ];
 }
