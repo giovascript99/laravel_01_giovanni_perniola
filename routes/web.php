@@ -22,6 +22,6 @@ Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contac
 
 // Inserimento corso
 
-Route::get('/corsi/creazione', [CorsiController::class, 'creazione'])->name('corsi.creazione');
+Route::get('/corsi/creazione', [CorsiController::class, 'creazione'])->name('corsi.creazione')->middleware('auth');
 
 Route::post('/corsi/submit', [CorsiController::class, 'store'])->name('corsi.submit');

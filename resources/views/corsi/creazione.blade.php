@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="time" class="form-label">Tempo:</label>
-                        <input type="text" name="time"  class="form-control" id="time" value="{{old('time')}}">
+                        <input type="number" name="time"  class="form-control" id="time" value="{{old('time')}}">
                     </div>
                     <div class="mb-3">
                         <label for="img" class="form-label">Aggiungi un'immagine:</label>

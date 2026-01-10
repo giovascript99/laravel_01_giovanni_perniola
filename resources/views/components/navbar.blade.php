@@ -23,8 +23,33 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{route('corsi')}}">I nostri corsi</a></li>
+                        @auth
                         <li><a class="dropdown-item" href="{{route('corsi.creazione')}}">Inserisci i tuoi corsi</a></li>
+                        @endauth
                     </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    @auth
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ciao, {{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="nav-link p-0 active">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                    @else
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Login/Registrati
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+                    </ul>
+                    @endauth
                 </li>
             </ul>
         </div>
