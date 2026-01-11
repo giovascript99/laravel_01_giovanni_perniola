@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="containe-fluid header">
+    <div class="container-fluid header">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 text-white">
+            <div class="col-12 col-md-4 text-white pt-5">
                 <h1 class="text-center">Registrati</h1>
                 <form method="POST" action="{{route('register')}}">
                     @csrf

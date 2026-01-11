@@ -1,18 +1,23 @@
 /* Header */
-.header{
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/media/bg_header.png');
-    min-height: 140vh;
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../../public/media/bg_header.png');
+    min-height: calc(100vh - 57px - 56px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* pagina contatti */
-.h-custom{
-    height: 400px;
+.homepage-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: whitesmoke;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-.box{
+/* pagina contatti */
+.box {
     border: dotted white 2px;
     min-height: 250px;
     max-width: 250px;
@@ -20,27 +25,11 @@
     cursor: pointer;
 }
 
-.box:hover{
+.box:hover {
     border: 3px solid white;
     transform: translateY(-10px);
 }
 
-.icon{
+.icon {
     font-size: 50px;
-}
-
-/* Users Section */
-.userHeight{
-    height: 80vh;
-}
-
-
-/* corsi */
-.corsi{
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/media/bg_header.png');
-    min-height: 140vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }

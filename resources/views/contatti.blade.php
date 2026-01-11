@@ -1,9 +1,9 @@
 <x-layout>
     <header>
         <div class="container-fluid header">
-            <div class="row h-custom justify-content-around align-items-center">
-                <div class="col-12 h-25 d-flex justify-content-center align-items-center">
-                    <h2 class="display-2 fw-semibold text-white text-center">CONTATTACI</h2>
+            <div class="row justify-content-around align-items-center">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <h2 class="display-2 fw-semibold text-white text-center py-5">CONTATTACI</h2>
                 </div>
                 <div class="col-md-3 text-center box d-flex flex-column justify-content-center align-items-center text-white">
                     <div class="row">
@@ -43,9 +43,9 @@
                 </div>
             </div>
             
-            <div class="row h-custom justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center py-5">
                 <h2 class="text-white display-4 text-center">...o Scrivici una mail</h2>
-                <div class="col-12 col-md-8 text-white">
+                <div class="col-12 col-md-6 text-white">
                     <form method="POST" action="{{route('contactUs')}}">
                         @csrf
                         <div class="mb-3">

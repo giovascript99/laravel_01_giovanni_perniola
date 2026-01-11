@@ -1,11 +1,12 @@
 <x-layout>
     
     <div class="container-fluid header">
+
         <header>
-            <div class="container-fluid">
-                <div class="row h-custom justify-content-around align-items-center">
+            <div class="container-fluid py-5">
+                <div class="row justify-content-around align-items-center">
                     <div class="col-4 bg-dark rounded py-2">
-                        <h2 class="text-white text-color text-center">CHI SIAMO</h2>
+                        <h2 class="text-white text-color text-center py-3">CHI SIAMO</h2>
                         <p class="text-white text-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere voluptates repellendus provident corporis vero in quidem officiis? Inventore ab eaque voluptates aliquid deserunt omnis ipsam, dolores ducimus, possimus quos earum voluptatem fugit delectus vero reprehenderit officiis eius quasi assumenda repellendus optio. Corporis aliquam laudantium optio voluptate? Maiores, accusantium consequatur.</p>
                     </div>
                     <div class="col-4 bg-dark rounded p-3 text-center">
@@ -14,9 +15,9 @@
                 </div>
             </div>
         </header>
-        
+
         <section>
-            <div class="container userHeight">
+            <div class="container py-5">
                 <div class="row h-custom align-items-center justify-content-around">
                     @foreach ($users as $user)
                     <div class="col-12 col-md-4">
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </section>
+
     </div>
     
 </x-layout>
