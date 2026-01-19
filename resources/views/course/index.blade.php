@@ -6,10 +6,10 @@
                     {{ session('successMessage') }}
                 </div>
             @endif
-            <h2 class="display-5 text-white text-center fw-semibold py-5">I nostri articoli</h2>
-            @foreach ($articles as $article)
+            <h2 class="display-5 text-white text-center fw-semibold py-3">I nostri corsi fitness</h2>
+            @foreach ($courses as $course)
                 <div class="col-12 col-md-3 py-5 d-flex justify-content-center">
-                    <x-cardArticle :$article />
+                    <x-cardCorso :$course />
                 </div>
             @endforeach
         </div>

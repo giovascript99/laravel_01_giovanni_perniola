@@ -76,7 +76,7 @@ class ArticleController extends Controller
             ]);
         }
 
-        return redirect()->route('homepage')->with('successMessage', 'Hai correttamente modificato il film');
+        return redirect()->route('article.index')->with("successMessage', 'Hai correttamente modificato l'articolo");
     }
 
     /**
@@ -85,6 +85,6 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
-        return redirect()->route('homepage')->with('successMessage', "Hai correttamente eliminato l'articolo");
+        return redirect()->route('article.index')->with('successMessage', "Hai correttamente eliminato l'articolo");
     }
 }

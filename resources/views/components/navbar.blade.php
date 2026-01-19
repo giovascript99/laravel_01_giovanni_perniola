@@ -24,14 +24,14 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a class="dropdown-item" href="{{route('corsi')}}">I nostri corsi</a>
+                            <a class="dropdown-item" href="{{route('course.index')}}">I nostri corsi</a>
                         </li>
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{route('article.index')}}">I nostri articoli</a>
                         </li>
                         @auth
                         <li class="nav-item">
-                            <a class="dropdown-item" href="{{route('corsi.creazione')}}">Inserisci i tuoi corsi</a>
+                            <a class="dropdown-item" href="{{route('course.create')}}">Inserisci i tuoi corsi</a>
                         </li>
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{route('article.create')}}">Inserisci i tuoi articoli</a>
@@ -45,6 +45,9 @@
                         Ciao, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{route('user.profile')}}" class="dropdown-item">Profilo personale</a>
+                        </li>
                         <li>
                             <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
                                 @csrf

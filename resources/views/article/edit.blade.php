@@ -1,5 +1,4 @@
 <x-layout>
-
     <div class="container-fluid header">
         <div class="row justify-content-center">
             <x-display-message />
@@ -32,4 +31,5 @@
                 </form>
             </div>
         </div>
+    </div>
 </x-layout>

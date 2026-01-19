@@ -5,7 +5,7 @@
             <x-display-message />
             <x-display-errors />
             <div class="col-12 col-md-6">
-                <form action="{{ route('corsi.submit') }}" method="POST" enctype="multipart/form-data"
+                <form action="{{ route('course.store') }}" method="POST" enctype="multipart/form-data"
                     class="text-white bg-dark rounded-4 p-3">
                     @csrf
                     <div class="mb-3">

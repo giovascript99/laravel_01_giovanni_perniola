@@ -1,12 +1,11 @@
 <x-layout>
     <header>
-        <div class="container-fluid header d-flex">
+        <div class="container-fluid header d-flex flex-column">
 
             @if (session()->has('emailSent'))
                 <div class="alert alert-success">
                     {{ session('emailSent') }}
                 </div>
-            
             @endif
 
             @if (session()->has('emailError'))
@@ -18,13 +17,19 @@
             @if (session()->has('successMessage'))
                 <div class="alert alert-success">
                     {{ session('successMessage') }}
-                </div>             
+                </div>
             @endif
 
             @if (session()->has('articleMessage'))
                 <div class="alert alert-success">
                     {{ session('articleMessage') }}
-                </div>             
+                </div>
+            @endif
+
+            @if (session()->has('errorMessage'))
+                <div class="alert alert-danger">
+                    {{ session('errorMessage') }}
+                </div>
             @endif
 
             <div class="row flex-fill align-items-center">

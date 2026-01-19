@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CorsoRequest extends FormRequest
+class CourseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,15 +30,16 @@ class CorsoRequest extends FormRequest
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return [
-            'title.required'=>'Il titolo è obbligatorio',
-            'title.min'=>'Il titolo richiede più di 3 caratteri',
-            'pt.required'=>'Inserire il nome del Personal Trainer',
-            'intensity.required'=>"Inserire l'intensità",
-            'time.required'=>"Inserire la durata del corso",
-            'img.required'=>"L'immagine è obbligatoria",
-            'img.image'=>"Il file deve essere di tipo immagine"
+            'title.required' => 'Il titolo è obbligatorio',
+            'title.min' => 'Il titolo richiede più di 3 caratteri',
+            'pt.required' => 'Inserire il nome del Personal Trainer',
+            'intensity.required' => "Inserire l'intensità",
+            'time.required' => "Inserire la durata del corso",
+            'img.required' => "L'immagine è obbligatoria",
+            'img.image' => "Il file deve essere di tipo immagine"
         ];
     }
 }
