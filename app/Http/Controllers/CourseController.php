@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\CourseRequest;
 use Illuminate\Support\Facades\Auth;
@@ -13,17 +14,19 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::all();
+        
         return view('course.index', compact('courses'));
     }
 
     public function create()
     {
-        return view('course.create');
+        $categories = Category::all();
+        return view('course.create', compact('categories'));
     }
 
     public function store(CourseRequest $request)
     {
-        $corso = Course::create([
+        $course = Course::create([
             'title' => $request->title,
             'pt' => $request->pt,
             'intensity' => $request->intensity,
@@ -31,6 +34,8 @@ class CourseController extends Controller
             'img' => $request->file('img')->store('img', 'public'),
             'user_id' => Auth::user()->id
         ]);
+
+        $course->categories()->attach($request->categories);
 
         return redirect()->route('homepage')->with('successMessage', 'Hai correttamente inserito il tuo corso');
     }

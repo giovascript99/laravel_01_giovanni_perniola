@@ -29,12 +29,18 @@
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{route('article.index')}}">I nostri articoli</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="{{route('category.index')}}">Tutte le categorie</a>
+                        </li>
                         @auth
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{route('course.create')}}">Inserisci i tuoi corsi</a>
                         </li>
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{route('article.create')}}">Inserisci i tuoi articoli</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="{{route('category.create')}}">Aggiungi una categoria</a>
                         </li>
                         @endauth
                     </ul>

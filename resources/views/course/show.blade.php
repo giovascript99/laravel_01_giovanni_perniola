@@ -10,6 +10,12 @@
                         <p class="card-text">pt: {{ $course->pt }}</p>
                         <p class="card-text">intensity: {{ $course->intensity }}</p>
                         <p class="card-text">time: {{ $course->time }}</p>
+                        <ul>
+                            @forelse ($course->categories as $category)
+                                <li>{{ $category->name }}</li>
+                            @empty
+                            @endforelse
+                        </ul>
                     </div>
                 </div>
             </div>

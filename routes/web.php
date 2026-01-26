@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
@@ -36,3 +37,9 @@ Route::delete('/article/delete/{article}', [ArticleController::class, 'destroy']
 
 // Profilo
 Route::get('/user/profile', [PublicController::class, 'profile'])->name('user.profile');
+
+// CATEGORY
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/create/submit', [CategoryController::class, 'store'])->name('category.submit');
+Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/show/{category}', [CategoryController::class, 'show'])->name('category.show'); 

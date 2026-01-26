@@ -10,6 +10,18 @@
         <p class="card-text">intensity: {{ $course->intensity }}</p>
         <p class="card-text">Time: {{ $course->time }}</p>
         <p>Creato da: {{ $course->user->name }}</p>
+        <div class="d-flex mb-2 justify-content-center">
+            @forelse ($course->categories as $category)
+                @if (!$loop->last)
+                    <a href="{{ route('category.show', compact('category')) }}"
+                        class="card-text small text-capital mx-1">#{{ $category->name }},</a>
+                @else
+                    <a href="{{ route('category.show', compact('category')) }}"
+                        class="card-text small text-capital mx-1">#{{ $category->name }}</a>
+                @endif
+            @empty
+            @endforelse
+        </div>
         <a href="{{ route('course.show', compact('course')) }}" class="btn btn-primary me-2">Vai al corso</a>
         @auth
             @if ($course->user_id == Auth::id())

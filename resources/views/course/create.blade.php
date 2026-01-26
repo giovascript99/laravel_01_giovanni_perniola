@@ -34,6 +34,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mb-4s">
+                        @foreach ($categories as $category)
+                        <span class="pe-2">
+                            <input type="checkbox" id="{{ 'categoryCheck' . $category->id }}" name="categories[]"
+                                value="{{ $category->id }}">
+                            <label for="{{ 'categoryCheck' . $category->id }}">{{ $category->name }}</label>
+                        </span>
+                        @endforeach
+                        <p class="pt-1">Non vedi la categoria corretta? <a href="{{ route('category.create') }}"
+                                class="fst-italic small text-white">Inseriscila tu</a></p>
+                    </div>
                     <div class="mb-3">
                         <label for="img" class="form-label">Inserisci immagine:</label>
                         <input type="file" name="img" class="form-control" id="img">
